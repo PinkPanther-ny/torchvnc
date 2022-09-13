@@ -32,6 +32,7 @@ sudo docker run -itd \
    -e NVIDIA_DRIVER_CAPABILITIES=compute,utility,video,graphics \
    -e RESOLUTION=1920x1080 \
    -e VNC_PASSWORD=${array[0]} \
+   -v /:/host_root_dir \
    -v ${HostData}:/datav \
    -p ${PortPrefix}80:80 \
    -p ${PortPrefix}90:5900 \
