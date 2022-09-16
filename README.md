@@ -5,9 +5,7 @@ Run script to create docker with specific port, connect via vnc software.
 
 git clone https://github.com/PinkPanther-ny/torchvnc_docker
 
-cd torchvnc_docker
-
-./create_test_vnc_docker.sh
+cd torchvnc_docker && ./create_test_vnc_docker.sh
 
 
 将新建
