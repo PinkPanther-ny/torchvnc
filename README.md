@@ -21,6 +21,25 @@ conda环境中自带python3.9，pytorch1.12+cu113，以及opencv
 
 docker_images目录下的两个Dockerfile则是如何构建此镜像的源码，可以用来学习dockerfile的基本操作
 
-----Alvin
-
 ====================================================================
+另附上docker中远程连接zifuture的配置
+
+server_addr: "zifuture.com:988"
+tunnels:
+  vnc:
+    proto:
+      tcp: 5900
+    remote_port: {自定义vnc连接zifuture的端口号}
+  ssh:
+    proto:
+      tcp: 22
+    remote_port: {自定义ssh连接zifuture的端口号}
+
+  tensorboard_or_jupyterhub:
+    proto:
+      http: 6006
+    remote_port: {自定义ssh连接jupyterhub或者其他网络服务的端口}
+    
+====================================================================
+
+--Alvin
