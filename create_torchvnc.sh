@@ -44,6 +44,7 @@ sudo docker run -itd \
    ${ImageName} \
    /bin/bash
 
+echo "Container ${ImageName}:/datav is linked to current folder" > containerinfo.txt
 echo Done, Unity VNC Port is ${PortPrefix}90
 
 echo ""
