@@ -5,7 +5,7 @@ git clone https://github.com/PinkPanther-ny/torchvnc_docker
 cd torchvnc_docker && ./create_test_vnc_docker.sh  
 ```
   
-运行后将自动新建```torchvnc_docker/data```目录，此目录在container中链接到```/datav```  
+运行后自动将```torchvnc_docker```此目录在container中链接到```/datav```  
 另外，主机的根目录```/```链接到container中的```/host_root_dir```
 以便于浏览数据及其他操作，需谨慎。  
   
@@ -26,13 +26,12 @@ docker_images目录下的两个Dockerfile则是如何构建此镜像的源码，
   
 ====================================================================  
   
-另附上docker中远程连接zifuture的配置，复制vpn文件夹至映射的```./data```文件夹中（可在容器```/datav```下找到）  
-运行后可内网外远程访问vnc，ssh，以及http服务等
+另附上container中ngrok内网穿透的配置，vpn文件夹映射到```/datav/vpn```文件夹中  
 建议在```tmux```或```screen```中运行
 ```
-./run_vpn.sh
+cd /datav/vpn && ./run_vpn.sh
 ```
-即可  
+运行后可内网外远程访问vnc，ssh，以及http服务等
  
 ```
 # Note that remote port if not specified, it will be assigned automatically

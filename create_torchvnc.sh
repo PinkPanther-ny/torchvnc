@@ -21,8 +21,7 @@ do
    array+=("${input}")
 done
 
-HostData=`pwd`/data
-mkdir -p $HostData
+HostData=`pwd`
 
 ImageName="alvin529/torchvnc:latest"
 ContainerName=${array[1]}
@@ -50,7 +49,7 @@ echo Done, Unity VNC Port is ${PortPrefix}90
 echo ""
 echo "Complete but cannot guarantee success, please check if there are any docker errors!"
 echo ""
-echo "./data folder is linked to /datav in container, host root is linked to /host_root_dir"
+echo "$HostData folder (current directory) is linked to /datav in container, host root is linked to /host_root_dir"
 echo "Please connect via vnc software, with this machine ip address and port prefix + 90"
 echo ""
 echo "eg: connect vnc to 10.16.101.168 and port 32090"
