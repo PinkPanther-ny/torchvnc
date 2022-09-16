@@ -22,6 +22,8 @@ do
 done
 
 HostData=`pwd`/data
+mkdir -p $HostData
+
 ImageName="alvin529/torchvnc:latest"
 ContainerName=${array[1]}
 PortPrefix=${array[2]}
