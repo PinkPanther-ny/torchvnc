@@ -47,8 +47,9 @@ sudo docker run -itd \
 echo Done, Unity VNC Port is ${PortPrefix}90
 
 echo ""
-echo "Done!"
+echo "Complete but cannot guarantee success, please check if there are any docker errors!"
 echo ""
+echo "./data folder is linked to /datav in container, host root is linked to /host_root_dir"
 echo "Please connect via vnc software, with this machine ip address and port prefix + 90"
 echo ""
 echo "eg: connect vnc to 10.16.101.168 and port 32090"
