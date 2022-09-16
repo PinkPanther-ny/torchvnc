@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-mkdir testdocker
+mkdir -p testdocker
 cp create_torchvnc.sh testdocker/
-cd testdocker && mkdir data && ./create_torchvnc.sh
+cd testdocker && mkdir -p data && ./create_torchvnc.sh
