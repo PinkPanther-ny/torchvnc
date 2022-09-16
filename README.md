@@ -13,7 +13,8 @@ cd torchvnc_docker && ./create_test_vnc_docker.sh
   
 ====================================================================  
   
-登陆后如果想从ssh连接，需修改```/etc/ssh/sshd_config```中的配置  
+登陆后如果想从ssh连接，需通过```passwd```设置用户ssh密码（非vnc密码）  
+另外需修改```/etc/ssh/sshd_config```中的配置  
 ```PermitRootLogin yes  ```  
 然后运行```/etc/init.d/ssh restart```即可  
   
